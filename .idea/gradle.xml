@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/CallBackActivity" />
             <option value="$PROJECT_DIR$/CustomLayoutLP" />
             <option value="$PROJECT_DIR$/ListView_Loader_ListActivity" />
+            <option value="$PROJECT_DIR$/addressBookApp" />
           </set>
         </option>
       </GradleProjectSettings>
