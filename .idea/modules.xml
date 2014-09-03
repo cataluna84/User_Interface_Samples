@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/CustomLayoutLP/CustomLayoutLP.iml" filepath="$PROJECT_DIR$/CustomLayoutLP/CustomLayoutLP.iml" />
       <module fileurl="file://$PROJECT_DIR$/ListView_Loader_ListActivity/ListView_Loader_ListActivity.iml" filepath="$PROJECT_DIR$/ListView_Loader_ListActivity/ListView_Loader_ListActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/User_Interface_Samples.iml" filepath="$PROJECT_DIR$/User_Interface_Samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitylifecycle/activitylifecycle.iml" filepath="$PROJECT_DIR$/activitylifecycle/activitylifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/addressBookApp/addressBookApp.iml" filepath="$PROJECT_DIR$/addressBookApp/addressBookApp.iml" />
     </modules>
   </component>

@@ -1,2 +1,3 @@
 include ':ListView_Loader_ListActivity', ':CallBackActivity', ':ActionBarCompat-BasicSample', ':CustomLayoutLP'
 include ':addressBookApp'
+include ':activitylifecycle'

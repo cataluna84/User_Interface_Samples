@@ -1,13 +1,13 @@
 package com.newthinktank.addressbookapp;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class DBTools extends SQLiteOpenHelper {
 
@@ -90,43 +90,43 @@ public class DBTools extends SQLiteOpenHelper {
 	}
 	
 	public ArrayList<HashMap<String, String>> getAllContacts() {
-		// ArrayList that contains every row in the database
-		// and each row key / value stored in a HashMap
-		ArrayList<HashMap<String, String>> contactArrayList;
-		contactArrayList = new ArrayList<HashMap<String, String>>();
-		
-		String selectQuery = "SELECT * FROM contacts ORDER BY lastName";
-		
-		// Open a database for reading and writing
-	    SQLiteDatabase database = this.getWritableDatabase();
-	    
-	    // Cursor provides read and write access for the 
-	    // data returned from a database query
-	    
-	    // rawQuery executes the query and returns the result as a Cursor
-	    Cursor cursor = database.rawQuery(selectQuery, null);
-	    
-	    // Cycle through the data
-	    if(cursor.moveToFirst()) {
-			do {
-				HashMap<String, String> contactMap = new HashMap<String, String>();
-				
-				// Store the key / value pairs in a HashMap
-				// Access the Cursor data by index that is in the same order
-				// as used when creating the table
-				contactMap.put("contactId", cursor.getString(0));
-				contactMap.put("firstName", cursor.getString(1));
-				contactMap.put("lastName", cursor.getString(2));
-				contactMap.put("phoneNumber", cursor.getString(3));
-				contactMap.put("emailAddress", cursor.getString(4));
-				contactMap.put("homeAddress", cursor.getString(5));
-				
-				contactArrayList.add(contactMap);
-			} while (cursor.moveToNext()); // Move Cursor to the next row
-	    }
-	    
-	    return contactArrayList;
-	}
+        // ArrayList that contains every row in the database
+        // and each row key / value stored in a HashMap
+        ArrayList<HashMap<String, String>> contactArrayList;
+        contactArrayList = new ArrayList<HashMap<String, String>>();
+
+        String selectQuery = "SELECT * FROM contacts ORDER BY lastName";
+
+        // Open a database for reading and writing
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        // Cursor provides read and write access for the
+        // data returned from a database query
+
+        // rawQuery executes the query and returns the result as a Cursor
+        Cursor cursor = database.rawQuery(selectQuery, null);
+
+        // Cycle through the data
+        if(cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> contactMap = new HashMap<String, String>();
+
+                // Store the key / value pairs in a HashMap
+                // Access the Cursor data by index that is in the same order
+                // as used when creating the table
+                contactMap.put("contactId", cursor.getString(0));
+                contactMap.put("firstName", cursor.getString(1));
+                contactMap.put("lastName", cursor.getString(2));
+                contactMap.put("phoneNumber", cursor.getString(3));
+                contactMap.put("emailAddress", cursor.getString(4));
+                contactMap.put("homeAddress", cursor.getString(5));
+
+                contactArrayList.add(contactMap);
+            } while (cursor.moveToNext()); // Move Cursor to the next row
+        }
+
+        return contactArrayList;
+    }
 	
 	public HashMap<String, String> getContactInfo(String id) {
 		HashMap<String, String> contactMap = new HashMap<String, String>();
