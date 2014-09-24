@@ -1,19 +1,14 @@
 package com.ui.la;
 
-import android.app.ActionBar;
 import android.app.ListActivity;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.provider.ContactsContract;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
 
 public class ListViewLoader extends ListActivity
@@ -35,7 +30,7 @@ public class ListViewLoader extends ListActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Create a progress bar to display while the list loads
+        /*// Create a progress bar to display while the list loads
         ProgressBar progressBar = new ProgressBar(this);
         progressBar.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT,
                 ActionBar.LayoutParams.WRAP_CONTENT, Gravity.CENTER));
@@ -49,7 +44,7 @@ public class ListViewLoader extends ListActivity
         // to display the progress bar
         for (int i = 0; i <= 50; i++) {
             SystemClock.sleep(100);
-        }
+        }*/
 
         // For the cursor adapter, specify which columns go into which views
         String[] fromColumns = {ContactsContract.Data.DISPLAY_NAME};
