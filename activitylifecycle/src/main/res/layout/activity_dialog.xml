@@ -37,4 +37,3 @@ limitations under the License.
         android:onClick="finishDialog"
         android:text="@string/btn_finish_dialog_label" />
 </LinearLayout>
-
